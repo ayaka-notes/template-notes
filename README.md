@@ -7,3 +7,4 @@
 - 后期计划：将所有的笔记的raw文件和web仓库文件全部分离，实现统一样式和自动化发布
 
 
+<img width="1324" alt="截屏2023-05-18 16 57 08" src="https://github.com/ayaka-notes/template-notes/assets/84625273/5db37205-8583-4e39-aad7-5f3b7c4ff8f0">
