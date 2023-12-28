@@ -4,7 +4,7 @@ sidebar_position: 1
 
 import OfficePreview from '@site/src/components/OfficePreview/index';
 
-<OfficePreview place = "/ppt/CSE-03inode-fs.pptx"/>
+
 
 # Readme
 
@@ -35,4 +35,7 @@ graph TD;
 2. 第二行
 
 ## PPT测试
+
+<OfficePreview place = "/ppt/CSE-03inode-fs.pptx"/>
+
 
