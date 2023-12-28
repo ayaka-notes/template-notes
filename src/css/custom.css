@@ -46,12 +46,33 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 } */
 
-/* 顶栏的头像 */
-.navbar__logo img {
-  border-radius: 50%; 
-  transition: transform 0.5s; /* 添加过渡效果 */
+
+/* For bilibili Iframe */
+@media (max-width: 610px) {
+  iframe[src^="//player.bilibili.com/"], iframe[src^="https://player.bilibili.com/"], iframe[src^="http://player.bilibili.com/"] {
+      width: 100%;
+      height: calc(56.25vw - 50.625px);
+  }
 }
 
-.navbar__logo img:hover {
-  transform: rotate(360deg); /* 鼠标悬停时旋转 */
+@media (min-width: 610px) {
+  iframe[src^="//player.bilibili.com/"], iframe[src^="https://player.bilibili.com/"], iframe[src^="http://player.bilibili.com/"] {
+      width: 100%;
+      height: min(506.125px, calc(56.25vw + 17.375px));
+  }
+}
+
+/* For Office Iframe */
+@media (max-width: 610px) {
+  iframe[src^="//view.officeapps.live.com"], iframe[src^="https://view.officeapps.live.com/"], iframe[src^="http://player.bilibili.com/"] {
+      width: 100%;
+      height: calc(70.25vw - 50.625px);
+  }
+}
+
+@media (min-width: 610px) {
+  iframe[src^="//view.officeapps.live.com"], iframe[src^="https://view.officeapps.live.com/"], iframe[src^="http://view.officeapps.live.com/"] {
+      width: 100%;
+      height: min(556.125px, calc(56.25vw + 17.375px));
+  }
 }

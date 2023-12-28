@@ -1,11 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import {themes as prismThemes} from 'prism-react-renderer';
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const math = require('remark-math');
-const katex = require('rehype-katex');
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -46,8 +46,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/ayaka-notes/template-notes/tree/main/',
-          remarkPlugins: [math],
-          rehypePlugins: [katex],  
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],  
         },
         blog: {
           showReadingTime: true,
@@ -72,6 +72,12 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -161,8 +167,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Musicminon, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula
       },
     }),
 };
