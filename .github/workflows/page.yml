@@ -59,7 +59,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: DeployPage
-        uses: ayaka-notes/Docusaurus-GitPage-Action@latest
+        uses: ayaka-notes/Docusaurus-GitPage-Action@1.0
             
       # - name: Set up Node.js
       #   uses: actions/setup-node@v2
