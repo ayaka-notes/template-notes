@@ -76,3 +76,15 @@
       height: min(556.125px, calc(56.25vw + 17.375px));
   }
 }
+
+
+/* 顶栏的头像 */
+.navbar__logo img {
+  border-radius: 50%; 
+  transition: transform 0.5s; /* 添加过渡效果 */
+}
+
+.navbar__logo img:hover {
+  transform: rotate(360deg); /* 鼠标悬停时旋转 */
+}
+

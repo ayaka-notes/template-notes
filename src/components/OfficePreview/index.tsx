@@ -13,11 +13,12 @@ export default function OfficePreview(props) {
         { () => {
             // return <iframe src={"//view.officeapps.live.com/op/view.aspx?src=" + window.location.protocol + "//" + window.location.host + props.place} >这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office</a> 提供支持。</iframe>
             // 得出移动端和桌面端的链接
-            if (props.place.startsWith("/") && config.baseUrl.endsWith("/")) {
-                props.place = props.place.substr(1);
+            let propsPlace = props.place;
+            if (propsPlace.startsWith("/") && config.baseUrl.endsWith("/")) {
+                propsPlace = propsPlace.substr(1);
             }
 
-            const targetUrl = config.baseUrl + props.place;
+            const targetUrl = config.baseUrl + propsPlace;
 
             const mobileOfficeUrl = "//view.officeapps.live.com/op/embed.aspx?src=" + window.location.protocol + "//" + window.location.host + targetUrl;
             const desktopOfficeUrl = "//view.officeapps.live.com/op/view.aspx?src=" + window.location.protocol + "//" + window.location.host + targetUrl;
